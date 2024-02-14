@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff9900, #ff6699); /* Background gradient */
+}
+
+#gameContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#ball {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease;
+}
+
+#wall {
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: right 1s;
+    animation: moveWall 2s infinite linear;
+}
+gradient-button{
+   width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+@keyframes moveWall {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+#scoreContainer {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#timer {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#distanceContainer {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.gradient-button {
+    background: linear-gradient(45deg, #ff6699, #ff9900); /* Button gradient */
+    color: #fff;
+    padding: 10px 20px;
+    border: 5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   position: relative;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, blue, #ff6633); /* Button hover gradient */
+}
